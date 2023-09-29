@@ -296,7 +296,7 @@ func RegisterAuthServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux
 			return
 		}
 
-		forward_AuthService_Register_0(annotatedContext, mux, outboundMarshaler, w, req, response_AuthService_Register_0{resp}, mux.GetForwardResponseOptions()...)
+		forward_AuthService_Register_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -509,7 +509,7 @@ func RegisterAuthServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux
 			return
 		}
 
-		forward_AuthService_Register_0(annotatedContext, mux, outboundMarshaler, w, req, response_AuthService_Register_0{resp}, mux.GetForwardResponseOptions()...)
+		forward_AuthService_Register_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -646,15 +646,6 @@ func RegisterAuthServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux
 	})
 
 	return nil
-}
-
-type response_AuthService_Register_0 struct {
-	proto.Message
-}
-
-func (m response_AuthService_Register_0) XXX_ResponseBody() interface{} {
-	response := m.Message.(*RegisterResponse)
-	return response.Data
 }
 
 var (
